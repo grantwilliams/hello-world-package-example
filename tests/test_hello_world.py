@@ -10,16 +10,15 @@ Tests for `hello_world` module.
 
 import unittest
 
-import hello_world
+import hello_world.cli
 
 
 class TestHello_world(unittest.TestCase):
 
     def setUp(self):
-        pass
+        self.hello_message = "Hello, World!"
 
-    def test_something(self):
-        assert(hello_world.__version__)
-
-    def tearDown(self):
-        pass
+    def test_prints_hello_world(self):
+        output = hello_world.cli.hello()
+        print(output, self.hello_message)
+        assert output == self.hello_message
