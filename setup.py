@@ -1,4 +1,3 @@
-"""A setuptools based setup module for Hello-World-Package"""
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
